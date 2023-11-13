@@ -63,21 +63,73 @@
 
 //concept of  react component
 
+// function App(){
+//     return (
+//         <>
+//            <h1>About React</h1>
+//              <ul>
+//                  <li>React is very good</li>
+//                  <li> single page </li>
+//                  <li> dynamic </li>
+//              </ul>
+
+
+//          </>
+//     );
+
+// }
+
+
+// Arrow function adva it dont require retrun statement 
+
+// function Name(){
+// return ( 
+//     <>
+//         <h1> hey this is function component </h1>
+//     </>
+// )
+
+// }
+
+
+// const App = () => (
+//     <>
+//         <h1>About React</h1>
+//         <ul>
+//             <li>React is very good</li>
+//             <li> single page </li>
+//             <li> dynamic </li>
+//         </ul>
+//         <Name/>
+//     </>
+// )
+
+// ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+
+
+const val = ()=>(
+    <>
+        <h1>Hello </h1>
+    </>
+)
+
+function Nam(){
+    var value = "world"
+    return(
+       <h1>hello {value}</h1>
+    )
+}
+
 function App(){
     return (
         <>
-           <h1>About React</h1>
-             <ul>
-                 <li>React is very good</li>
-                 <li> single page </li>
-                 <li> dynamic </li>
-             </ul>
-        
-        
-         </>
-    );
-
+            <h1>Getting Started with Jsx</h1>
+            <Nam/>
+            <val/>
+        </>
+    )
 }
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
 
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
 
