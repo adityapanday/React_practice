@@ -108,28 +108,157 @@
 
 
 
-const val = ()=>(
-    <>
-        <h1>Hello </h1>
-    </>
-)
 
-function Nam(){
-    var value = "world"
-    return(
-       <h1>hello {value}</h1>
-    )
-}
+// V imp part
 
-function App(){
+
+// function Val(){
+//     var a = 50
+//     return a;
+// }
+
+// function Nam(){
+//     var value = "world"
+//     var age = "21"
+//     return(
+//         <>
+            
+//        <h1>hello {value}</h1>
+//        <h2>you age is { age}</h2>
+//         </>
+//     )
+// }
+
+
+// const Car = ()=>(
+    
+//         <>
+//         <h1>List of Cars</h1>
+//            <ul>
+//             <li>BMW</li>
+//             <li>Audi</li>
+//             <li>TATA</li>
+//             <li>Kia</li>
+//            </ul>
+//         </>
+    
+// )
+
+// function App(){
+//     let Array = [1,2,3,4,5];
+//     var Object = {
+//         Name : "Aditya",
+//         age : '21'
+//     }
+//     return (
+//         <>
+//             <h1>Getting Started with Jsx</h1>
+//             <Nam/>
+//             <val/>
+//             <p>this is example to return fn with dii form  : {Val()}</p>
+//                 <p>Normal Way to add Array :  {Array}</p>
+//                 <p> Another way to add via map in 1 by 1 manner {Array.map((i)=><h2>{Array[i-1]}</h2>)}</p>
+//           <p>  This is Example of Object in jsx : {Object.Name}  </p>
+
+
+//          <Car/>
+
+
+
+
+
+//         </>
+//     )
+// }
+
+
+
+function Studen() {
+    const Student = [
+      { Name: "Aditya", Age: 21, Marks: 89 },
+      { Name: "Anjali", Age: 21, Marks: 92 },
+      { Name: "XYZ", Age: 32, Marks: 88 },
+    ];
+  
     return (
-        <>
-            <h1>Getting Started with Jsx</h1>
-            <Nam/>
-            <val/>
+      <>
+        <h1>Student Data Table</h1>
+        <table>
+          <tr>
+            <td>Student Name</td>
+            <td>Student Age</td>
+            <td>Student Marks</td>
+          </tr>
+  
+          {Student.map((student, index) => (
+            <tr key={index}>
+              <td>{student.Name}</td>
+              <td>{student.Age}</td>
+              <td>{student.Marks}</td>
+            </tr>
+          ))}
+        </table>
+      </>
+    );
+  }
+
+  const Car = () => {
+    const itemsSold = [
+      { id: 1, name: "iPhone 14", price: 1200, qty: 22 },
+      { id: 2, name: "iPad Pro", price: 800, qty: 18 },
+      { id: 3, name: "Macbook Air", price: 1500, qty: 7 },
+      { id: 4, name: "Samsung S23", price: 1100, qty: 16 },
+      { id: 5, name: "Dell Inspiron 5590", price: 1200, qty: 5 }
+    ];
+
+    return (
+      <>
+        <h1>Record of sold items</h1>
+        <table border="1px">
+         <thead>
+           <tr>
+           <th>id</th>
+           <th>name</th>
+           <th>Selling price</th>
+           <th>Quantity</th>
+           </tr>
+         </thead>
+         <tbody>
+           {itemsSold.map((item, id) => (
+             <tr key={id}>
+           <td>{item.id}</td>
+           <td>{item.name}</td>
+           <td>{item.price}</td>
+           <td>{item.qty}</td>
+           </tr>
+           ))}
+         </tbody>
+        </table>
+      </>
+    );
+  };
+
+  let lofedIn = true;
+
+  function Display(){
+      let konH = false;
+      if(konH){
+          return  <Car/>
+      }
+      return <Studen/>
+  }
+  function App(){
+   
+    return(
+         <>
+        {/* this is imp condtion ? truthy:falsy  altrnative of if else  */}
+        <h1>hello {lofedIn?"Aditya":"User"}</h1>
+            <Display/>
         </>
     )
-}
+  }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+  
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  
 
